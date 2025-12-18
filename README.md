@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 鉄道運行情報デジタルサイネージ
 
-## Getting Started
+鉄道の運行状況をリアルタイムで表示するデジタルサイネージアプリケーションです。路線図と運行状況、振替輸送情報を視覚的にわかりやすく表示します。
 
-First, run the development server:
+> **⚠️ 免責事項**  
+> このアプリケーションは鉄道会社非公式のサンプルアプリケーションです。実際の運行情報を提供するものではありません。
+
+## 🎤 イベント情報
+
+このアプリケーションは、国土交通省主催のイベント「[LINKS:POWER of DATA x DATA 2025](https://asciistartup.connpass.com/event/377258/)」のライトニングトークのために作成されたデモンストレーション用サンプルアプリケーションです。
+
+## 主な機能
+
+- 🗺️ **インタラクティブな路線図表示**  
+  Deck.GLとMapLibreを使用した滑らかな地図表示
+  
+- 🚃 **運行状況の表示**  
+  遅延・運休などの運行情報を日本語・英語で表示
+  
+- 🔄 **振替輸送情報**  
+  東京メトロ、都営地下鉄、私鉄の振替路線を表示
+  
+- 📰 **スクロール速報**  
+  画面下部にマーキー形式で最新情報を表示
+  
+- 📱 **レスポンシブデザイン**  
+  モバイル表示時は運行情報・振替輸送情報をFABボタンでトグル表示
+  - ハンバーガー/バツアイコンがスムーズにモーフィング
+  - サイドバーとフッターがスライドアニメーションで表示/非表示
+
+## 技術スタック
+
+- **フレームワーク**: Next.js 16 (App Router)
+- **言語**: TypeScript
+- **地図ライブラリ**: 
+  - Deck.GL 9.2.5
+  - MapLibre GL 5.15.0
+  - react-map-gl 8.1.0
+- **アニメーション**: @react-spring/web
+- **スタイリング**: Tailwind CSS 4
+- **UI コンポーネント**: 
+  - react-fast-marquee
+
+## セットアップ
+
+### 必要要件
+
+- Node.js 20以上
+- npm / yarn / pnpm / bun
+
+### インストール
+
+```bash
+npm install
+```
+
+### 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてアプリケーションを表示します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ビルド
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## プロジェクト構成
 
-To learn more about Next.js, take a look at the following resources:
+```
+signage/
+├── app/
+│   ├── page.tsx           # メインページ
+│   ├── layout.tsx         # レイアウト
+│   ├── globals.css        # グローバルスタイル
+│   ├── components/
+│   │   ├── map.tsx        # マップコンポーネント
+│   │   └── fab.tsx        # FAB（フローティングアクションボタン）
+│   ├── data/
+│   │   ├── jy.json        # 山手線駅データ
+│   │   └── jk.json        # 京浜東北線駅データ
+│   └── hooks/             # カスタムフック
+├── public/                # 静的ファイル
+└── package.json
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## データ形式
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+路線の駅データは `app/data/jy.json` と `app/data/jk.json` に以下の形式で格納されています：
 
-## Deploy on Vercel
+```json
+[
+  {
+    "name": "駅名",
+    "coordinates": [経度, 緯度]
+  }
+]
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> **📝 注意**  
+> `jy.json` と `jk.json` はライセンスの関係でリポジトリにプッシュしていません。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## デプロイ
+
+Vercel での デプロイが推奨されます：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+その他のプラットフォームについては [Next.js デプロイメントドキュメント](https://nextjs.org/docs/app/building-your-application/deploying) を参照してください。
+
+## ライセンス
+
+Private
+
+## 開発
+
+このプロジェクトは [Next.js](https://nextjs.org) で構築されています。詳細は以下を参照してください：
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Deck.GL Documentation](https://deck.gl)
+- [MapLibre Documentation](https://maplibre.org)

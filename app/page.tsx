@@ -93,7 +93,7 @@ export default function Home() {
         style={isLargeScreen ? {} : { ...springs }}
         className="bg-black-600 w-full h-1/6 fixed bottom-0 left-0 bg-black z-20"
       >
-        <div className="w-full h-1/2 bg-zinc-900 text-white flex flex-nowrap overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="w-full h-1/2 bg-zinc-900 text-white flex flex-nowrap overflow-y-hidden overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className="w-1/7 max-md:w-1/3 py-1 px-2 shrink-0">
             <div className="opacity-50 border-b-2 border-gray-500">
               <span className="text-xl">JR東日本線</span>

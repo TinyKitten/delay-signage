@@ -139,7 +139,7 @@ export default function Home() {
         </div>
         <div className="w-full h-1/2 bg-zinc-900 text-white flex py-4">
           <Marquee
-            className="text-4xl text-nowrap"
+            className="text-3xl text-nowrap"
             speed={200}
             gradient={false}
           >

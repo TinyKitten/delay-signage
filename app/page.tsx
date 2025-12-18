@@ -100,7 +100,8 @@ export default function Home() {
               <span className="text-xs">からの</span>
             </div>
             <div className="opacity-75">
-              <p className="text-2xl max-lg:text-xl">振替路線 1 / 2</p>
+              <p className="text-2xl lg:hidden">振替路線</p>
+              <p className="text-2xl max-lg:hidden">振替路線 1 / 2</p>
             </div>
           </div>
           <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/3 shrink-0">

@@ -21,6 +21,18 @@ const notoSansJP = Noto_Sans_JP({
 export const metadata: Metadata = {
   title: "Station Signage",
   description: "A simple app for displaying station signage information.",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Signage",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({

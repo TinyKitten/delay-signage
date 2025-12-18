@@ -96,14 +96,14 @@ export default function Home() {
         <div className="w-full h-1/2 bg-zinc-900 text-white flex flex-nowrap overflow-y-hidden overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className="w-1/7 max-md:w-1/3 py-1 px-2 shrink-0">
             <div className="opacity-50 border-b-2 border-gray-500">
-              <span className="text-xl">JR東日本線</span>
+              <span className="text-xl max-md:text-xs">JR東日本線</span>
               <span className="text-xs">からの</span>
             </div>
             <div className="opacity-75">
-              <p className="text-2xl">振替路線 1 / 2</p>
+              <p className="text-2xl max-lg:text-xl">振替路線 1 / 2</p>
             </div>
           </div>
-          <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/4 shrink-0">
+          <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/3 shrink-0">
             <p className="px-2 text-4xl max-md:px-1 max-md:text-xl font-bold whitespace-nowrap">
               東京メトロ
             </p>
@@ -114,7 +114,7 @@ export default function Home() {
             </p>
             <p className="text-xl px-1 flex-1"></p>
           </div>
-          <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/4 shrink-0">
+          <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/3 shrink-0">
             <p className="px-2 text-4xl max-md:px-1 max-md:text-xl font-bold whitespace-nowrap">
               都営地下鉄
             </p>
@@ -125,7 +125,7 @@ export default function Home() {
             </p>
             <p className="text-xl px-1 flex-1"></p>
           </div>
-          <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/4 shrink-0">
+          <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/3 shrink-0">
             <p className="px-2 text-4xl max-md:px-1 max-md:text-xl font-bold whitespace-nowrap">
               小田急線
             </p>

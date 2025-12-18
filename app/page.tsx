@@ -91,7 +91,7 @@ export default function Home() {
 
       <animated.footer
         style={isLargeScreen ? {} : { ...springs }}
-        className="bg-black-600 w-full h-1/6 fixed bottom-0 left-0 bg-black z-20"
+        className="w-full h-1/6 fixed bottom-0 left-0 bg-black z-20"
       >
         <div className="w-full h-1/2 bg-zinc-900 text-white flex flex-nowrap overflow-y-hidden overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className="w-1/7 max-md:w-1/3 py-1 px-2 shrink-0">
@@ -137,7 +137,7 @@ export default function Home() {
             <p className="text-xl px-1 flex-1 whitespace-nowrap">下北沢</p>
           </div>
         </div>
-        <div className="w-full h-1/2 bg-zinc-900 text-white flex py-4">
+        <div className="w-full h-1/2 text-white flex py-4 bg-[repeating-linear-gradient(-45deg,#000,#000_3px,#1a1a1a_3px,#1a1a1a_6px)]">
           <Marquee
             className="text-3xl text-nowrap"
             speed={200}

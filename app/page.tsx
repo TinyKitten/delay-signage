@@ -38,11 +38,11 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen md:w-full md:h-full md:min-w-7xl md:min-h-180 aspect-video overflow-hidden">
-      <div className="flex">
+      <div className="flex h-full">
         <FAB state={fabState} onClick={handleFabClick} />
         <animated.aside
           style={isLargeScreen ? {} : { ...springs }}
-          className="w-screen h-screen bg-white md:w-1/4 flex shadow-xl z-10"
+          className="w-screen h-screen bg-white md:w-1/4 flex shadow-xl z-10 md:h-full"
         >
           <div className="w-1/8 h-full p-1 bg-linear-to-b from-green-500 to-green-800 flex flex-col justify-end pb-[10cqi]">
             <p className="text-white text-xl font-bold -mb-4">1</p>
@@ -91,7 +91,7 @@ export default function Home() {
 
       <animated.footer
         style={isLargeScreen ? {} : { ...springs }}
-        className="w-full h-1/6 fixed bottom-0 left-0 bg-black z-20"
+        className="w-full h-1/6 min-h-32 fixed bottom-0 left-0 bg-black z-20"
       >
         <div className="w-full h-1/2 bg-zinc-900 text-white flex flex-nowrap overflow-y-hidden overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className="w-1/7 max-md:w-1/3 py-1 px-2 shrink-0">

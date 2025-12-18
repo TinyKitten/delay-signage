@@ -12,3 +12,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-noto-sans-jp), var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* MapLibre credit fix for mobile */
+.maplibregl-ctrl-attrib,
+.mapboxgl-ctrl-attrib {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+  padding: 2px 4px !important;
+  font-size: 10px !important;
+  max-width: 50% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}

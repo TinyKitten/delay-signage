@@ -26,4 +26,12 @@ body {
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
+  z-index: 30 !important;
+}
+
+@media (min-width: 768px) {
+  .maplibregl-ctrl-attrib,
+  .mapboxgl-ctrl-attrib {
+    bottom: calc(16.67% + 4px) !important;
+  }
 }

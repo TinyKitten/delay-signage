@@ -143,7 +143,7 @@ export default function Home() {
             speed={200}
             gradient={false}
           >
-            現在、山手線における信号機故障のため、一部列車に遅延が発生しております。
+            現在、山手線における信号機故障のため、一部列車に遅延が発生しております。なお、このデータはダミーです。実際は遅延していないかもしれません。
           </Marquee>
         </div>
       </animated.footer>

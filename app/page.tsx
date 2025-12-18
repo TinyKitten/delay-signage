@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen md:w-full md:h-full md:min-w-7xl md:min-h-180 aspect-video overflow-hidden">
+    <div className="w-screen h-dvh md:w-full md:h-full md:min-w-7xl md:min-h-180 aspect-video overflow-hidden">
       <div className="flex h-full">
         <FAB state={fabState} onClick={handleFabClick} />
         <animated.aside

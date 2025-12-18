@@ -109,7 +109,7 @@ export default function Home() {
               東京メトロ
             </p>
           </div>
-          <div className="bg-zinc-600 w-1/18 max-md:w-1/6 border-r border-black flex flex-col justify-center shrink-0">
+          <div className="bg-zinc-600 w-1/18 max-md:w-1/4 border-r border-black flex flex-col justify-center shrink-0">
             <p className="text-xl px-1 border-b-2 border-zinc-700 flex-1 whitespace-nowrap">
               全路線
             </p>
@@ -120,7 +120,7 @@ export default function Home() {
               都営地下鉄
             </p>
           </div>
-          <div className="bg-zinc-600 w-1/18 max-md:w-1/6 border-r border-black flex flex-col justify-center shrink-0">
+          <div className="bg-zinc-600 w-1/18 max-md:w-1/4 border-r border-black flex flex-col justify-center shrink-0">
             <p className="text-xl px-1 border-b-2 border-zinc-700 flex-1 whitespace-nowrap">
               全路線
             </p>
@@ -131,7 +131,7 @@ export default function Home() {
               小田急線
             </p>
           </div>
-          <div className="bg-zinc-600 w-1/18 max-md:w-1/6 border-r border-black flex flex-col justify-center shrink-0">
+          <div className="bg-zinc-600 w-1/18 max-md:w-1/4 border-r border-black flex flex-col justify-center shrink-0">
             <p className="text-xl px-1 border-b-2 border-zinc-700 flex-1 whitespace-nowrap">
               新宿
             </p>

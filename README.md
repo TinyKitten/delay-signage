@@ -104,11 +104,41 @@ signage/
 > **📝 注意**  
 > `jy.json` と `jk.json` はライセンスの関係でリポジトリにプッシュしていません。
 
+### ローカル開発時のデータ設定
+
+ローカル開発時は、`app/data/` ディレクトリに直接 `jy.json` と `jk.json` を配置してください。
+
 ## デプロイ
 
-Vercel での デプロイが推奨されます：
+### Vercelへのデプロイ
+
+Vercel でのデプロイが推奨されます：
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+
+#### 環境変数の設定
+
+Vercelでビルドする際は、以下の環境変数を設定してください：
+
+1. **`JY_JSON_DATA`**: 山手線の駅データ（JSON形式）
+   ```json
+   [{"name":"品川","coordinates":[139.74,35.63]},{"name":"大崎","coordinates":[139.73,35.62]}]
+   ```
+
+2. **`JK_JSON_DATA`**: 京浜東北線の駅データ（JSON形式）
+   ```json
+   [{"name":"東京","coordinates":[139.77,35.68]},{"name":"有楽町","coordinates":[139.76,35.67]}]
+   ```
+
+**設定手順:**
+1. Vercelダッシュボードでプロジェクトを開く
+2. `Settings` > `Environment Variables` に移動
+3. 上記の環境変数を追加
+4. 再デプロイ
+
+詳細は [VERCEL_ENV.md](VERCEL_ENV.md) を参照してください。
+
+### その他のプラットフォーム
 
 その他のプラットフォームについては [Next.js デプロイメントドキュメント](https://nextjs.org/docs/app/building-your-application/deploying) を参照してください。
 

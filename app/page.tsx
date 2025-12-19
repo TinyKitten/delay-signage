@@ -114,7 +114,6 @@ export default function Home() {
             </p>
             <p className="text-xl px-1 flex-1"></p>
           </div>
-          1.2
           <div className="py-2 bg-zinc-800 flex items-center w-1/6 max-lg:w-1/3 shrink-0">
             <p className="px-2 text-4xl max-md:px-1 max-md:text-xl font-bold whitespace-nowrap">
               都営地下鉄
